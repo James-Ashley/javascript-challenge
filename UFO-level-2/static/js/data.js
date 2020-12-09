@@ -996,5 +996,14 @@ var data = [{
     shape: "unknown",
     durationMinutes: "4 minutes",
     comments: "Bright orange object&#44 rapid speed and direction changes .."
-  }
+  },
+  {
+    datetime: "12/24/2020",
+    city: "Mtn Town",
+    state: "NC",
+    country: "US",
+    shape: "9 leading figures and sleigh",
+    durationMinutes: "4 minutes",
+    comments: "Bright red object with aurora borealis type trail rapid speed and direction changes .."
+  },
 ];

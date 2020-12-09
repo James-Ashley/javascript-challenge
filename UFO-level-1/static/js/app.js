@@ -6,6 +6,10 @@ var tbody = d3.select("tbody")
 
 console.log(tableData);
 
+function buildTable(tableData) {
+
+tbody.html("")
+
 tableData.forEach((ufoSighting) => {
     console.log(ufoSighting);
     var row = tbody.append("tr")
@@ -16,11 +20,15 @@ tableData.forEach((ufoSighting) => {
     })
 
 });
+};
+
+buildTable(tableData);
+
 var button = d3.select("#filter-btn");
-var form = d3.select("#filters");
+var input = d3.select("#form");
 
 button.on("click", runEnter);
-form.on("submit", runEnter);
+input.on("submit", runEnter);
 
 function runEnter() {
 
@@ -31,7 +39,17 @@ function runEnter() {
     var inputValue = inputElement.property("value");
     console.log(inputValue);
 
-    var filteredData = tableData.filter((entered) => entered.date === inputValue);
+    var filteredData = tableData.filter(entered => entered.datetime === inputValue);
     console.log(filteredData);
 
+    buildTable(filteredData);
+
 };
+
+// Using multiple input tags and/or select dropdowns, write JavaScript code so the user can to set multiple filters and search for UFO sightings using the following criteria based on the table columns:
+
+// date/time
+// city
+// state
+// country
+// shape
